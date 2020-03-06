@@ -36,3 +36,33 @@ class Stack {
   }
 }
 
+//create a nee Stack and insert data into the stack 
+function main() {
+  let starTrek = new Stack();
+  starTrek.push('Kirk');
+  starTrek.push('Spock');
+  starTrek.push('McCoy');
+  starTrek.push('Scotty');
+
+  console.log(JSON.stringify(starTrek), 'starTrek Stack');
+  return starTrek;
+}
+main();
+
+//allows you to look at the top of the stack without removing it 
+function peek() {
+
+}
+peek();
+
+//allows you to check if the stack is empty or not
+function isEmpty() {
+
+}
+isEmpty();
+
+//to display the stack 
+function display() {
+
+}
+display();
