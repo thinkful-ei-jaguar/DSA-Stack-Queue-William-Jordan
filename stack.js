@@ -47,22 +47,41 @@ function main() {
   console.log(JSON.stringify(starTrek), 'starTrek Stack');
   return starTrek;
 }
-main();
+// main();
 
 //allows you to look at the top of the stack without removing it 
-function peek() {
-
+function peek(stack) {
+  const topNode = stack.top.data;
+  console.log(topNode, 'Top Node');
 }
-peek();
+// const starTrek = main();
+// peek(starTrek);
 
 //allows you to check if the stack is empty or not
-function isEmpty() {
-
+function isEmpty(stack) {
+  console.log(!stack.top);
+  return !stack.top;
 }
-isEmpty();
+// const emptyStack = new Stack();
+// const fullStack = main();
+// isEmpty(emptyStack);
+// isEmpty(fullStack);
 
 //to display the stack 
-function display() {
+function display(stack) {
+  let tempNode = stack.top;
+  // let displayedArr = [];
+  let displayStack = '';
+  while (tempNode.next !== null) {
+    // displayedArr.push(tempNode.data);
+    displayStack += `${tempNode.data} -> `;
+    tempNode = tempNode.next;
+  }
+  // displayedArr.join();
+  // console.log(displayedArr, 'Displayed Stack Array');
 
+  displayStack += tempNode.data;
+  console.log(displayStack, ' = Display Stack String');
+  return displayStack;
 }
-display();
+display(main());
