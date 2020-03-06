@@ -50,7 +50,7 @@ function main() {
 // main();
 
 //allows you to look at the top of the stack without removing it 
-function peek(stack) {
+const peek = (stack) => {
   const topNode = stack.top.data;
   console.log(topNode, 'Top Node');
 }
@@ -58,7 +58,7 @@ function peek(stack) {
 // peek(starTrek);
 
 //allows you to check if the stack is empty or not
-function isEmpty(stack) {
+const isEmpty = (stack) => {
   console.log(!stack.top);
   return !stack.top;
 }
@@ -68,7 +68,7 @@ function isEmpty(stack) {
 // isEmpty(fullStack);
 
 //to display the stack 
-function display(stack) {
+const display = (stack) => {
   let tempNode = stack.top;
   // let displayedArr = [];
   let displayStack = '';
@@ -83,4 +83,12 @@ function display(stack) {
   displayStack += tempNode.data;
   return displayStack;
 }
-console.log(display(main()));
+//console.log(display(main()));
+
+module.exports = {
+  _Node,
+  Stack,
+  peek,
+  display,
+  isEmpty
+}
