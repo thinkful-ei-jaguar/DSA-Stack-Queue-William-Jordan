@@ -59,7 +59,7 @@ const peek = (stack) => {
 
 //allows you to check if the stack is empty or not
 const isEmpty = (stack) => {
-  console.log(!stack.top);
+  // console.log(!stack.top);
   return !stack.top;
 }
 // const emptyStack = new Stack();
