@@ -74,14 +74,13 @@ function display(stack) {
   let displayStack = '';
   while (tempNode.next !== null) {
     // displayedArr.push(tempNode.data);
-    displayStack += `${tempNode.data} -> `;
+    displayStack += `${tempNode.data}  \n` ;
     tempNode = tempNode.next;
   }
   // displayedArr.join();
   // console.log(displayedArr, 'Displayed Stack Array');
 
   displayStack += tempNode.data;
-  console.log(displayStack, ' = Display Stack String');
   return displayStack;
 }
-display(main());
+console.log(display(main()));
